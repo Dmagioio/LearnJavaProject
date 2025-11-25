@@ -1,24 +1,35 @@
 package com.example.mylabandroid;
 
-import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-
+import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 public class ActivityThree extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_three);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+    }
+    String s = "відповідь прийнято";
+    String s1 = "Ваш визначений рівень організованості";
+    public void addPointA(View v) {
+        display(s);
+    }
+    public void addPointB(View v) {
+        display(s);
+    }
+    public void addPointC(View v) {
+        display(s);
+    }
+    public void display(String s) {
+        TextView scoreView = findViewById(R.id.txt);
+        scoreView.setText(String.valueOf(s));
+    }
+    public void finished(View v) {
+        displayResult();
+    }
+    public void displayResult() {
+        TextView scoreView = findViewById(R.id.txt_result);
+        scoreView.setText(s1);
     }
 }
