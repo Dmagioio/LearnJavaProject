@@ -11,21 +11,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyLabAndroid">
-        <activity
-            android:name=".ActivityThree"
-            android:exported="false" />
-        <activity
-            android:name=".ActivityTwo"
-            android:exported="false" />
+
+        <!-- Головний екран, з якого запускається додаток -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Екрани вікторини -->
+        <activity android:name=".QuestionOneActivity" />
+        <activity android:name=".QuestionTwoActivity" />
+        <activity android:name=".QuestionThreeActivity" />
+        <activity android:name=".ResultsActivity" />
+
     </application>
 
 </manifest>

@@ -1,41 +1,13 @@
 package com.example.mylabandroid;
 
 import androidx.appcompat.app.AppCompatActivity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    String s = "відповідь прийнято";
-    Button btn;
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        btn = findViewById(R.id.btnActTwo);
-        btn.setOnClickListener(this);
-    }
-    @Override
-    public void onClick(View v) {
-        int id = v.getId();
-        if (id == R.id.btnActTwo) {
-            Intent intent = new Intent(this, ActivityTwo.class);
-            startActivity(intent);
-        }
-    }
-    public void addPointA(View v) {
-        display(s);
-    }
-    public void addPointB(View v) {
-        display(s);
-    }
-    public void addPointC(View v) {
-        display(s);
-    }
-    public void display(String s) {
-        TextView scoreView = findViewById(R.id.txt);
-        scoreView.setText(String.valueOf(s));
-    }
+public class MainActivity extends AppCompatActivity {
+
+
 }
